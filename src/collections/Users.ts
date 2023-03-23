@@ -30,7 +30,7 @@ const Users: CollectionConfig = {
       defaultValue: ["developer"],
       required: true,
       access: {
-        read: isAdminOrSelfFieldLevel,
+        read: () => true,
         create: isAdminFieldLevel,
         update: isAdminFieldLevel,
       },
